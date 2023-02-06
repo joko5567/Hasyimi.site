@@ -1,29 +1,95 @@
-html,
-body {
-	background-image: linear-gradient(to right, #7028e4 , #e5b2ca, #00d2ff, #5400f6);
-	background-size: 400% 400%;
-	animation: AnimationName 15s ease infinite;
+html, body{
+	width:100%; 
+	height:100%; 
+	padding:0px; 
+	margin:0px;
+	overflow: hidden;
+	background-image: linear-gradient(to right, #7028e4, #e5b2ca);
+  background-size: 400% 400%;
+  animation: AnimationName 20s ease infinite;
 }
 
 @keyframes AnimationName {
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+#projector {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+} 
+
+.center-div {
+	width:580px;
+    height:374px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left: -290px;
+    margin-top:  -187px;
+}
+
+#preloaderDiv
+{
+	position:absolute;
+	left:50%;
+    top:50%;
+    margin-left: -27px;
+    margin-top:  -27px;
+}
+
+#logo{
+	opacity:0;
+    filter: alpha(opacity=0);
+}
+
+#date2014
+{
+	position:absolute;
+	padding-left: 210px;
+	padding-top:15px;
+	opacity:0;
+	top:303px;
+	left:0;
+    filter: alpha(opacity=0);
+}
+h1 {
+	font-size: 24px;
+	margin: 10px 0 0 0;
+	font-weight: lighter;
+	color: #eeeeee;
+}
+
+p {
+	font-size: 16px;
+	font-weight: light;
+	color: #eeeeee;
+}
+
+span a {
+	font-size: 18px;
+	color: #cccccc;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: all 0.4s ease-in-out;
+}
+
+@keyframes float {
 	0% {
-		background-position: 0% 0%
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
 	}
-
-	25% {
-		background-position: 100% 0%
-	}
-
 	50% {
-		background-position: 100% 100%
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
 	}
-
-	75% {
-		background-position: 0% 100%
-	}
-
 	100% {
-		background-position: 0% 0%
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
 	}
 }
 
@@ -46,7 +112,7 @@ body {
 	border: 5px white solid;
 	border-radius: 50%;
 	overflow: hidden;
-	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 }
@@ -69,57 +135,30 @@ body {
 	min-width: 200px;
 	z-index: 9;
 }
-
 .text-auto {
-	margin-top: auto !important;
+	margin-top: auto!important;
 }
-
 .text-center {
 	text-align: center;
 }
-
 h3 {
-	color: whitesmoke;
+	color:whitesmoke;
 }
-
 .wave {
-	animation-name: wave-animation;
-	animation-duration: 3.5s;
-	animation-iteration-count: infinite;
+	animation-name: wave-animation;  
+	animation-duration: 3.5s;        
+	animation-iteration-count: infinite;  
 	transform-origin: 70% 70%;
 	display: inline-block;
-}
-
-@keyframes wave-animation {
-	0% {
-		transform: rotate(0.0deg)
-	}
-
-	10% {
-		transform: rotate(14.0deg)
-	}
-
-	20% {
-		transform: rotate(-8.0deg)
-	}
-
-	30% {
-		transform: rotate(14.0deg)
-	}
-
-	40% {
-		transform: rotate(-4.0deg)
-	}
-
-	50% {
-		transform: rotate(10.0deg)
-	}
-
-	60% {
-		transform: rotate(0.0deg)
-	}
-
-	100% {
-		transform: rotate(0.0deg)
-	}
-}
+  }
+  
+  @keyframes wave-animation {
+	  0% { transform: rotate( 0.0deg) }
+	 10% { transform: rotate(14.0deg) }  
+	 20% { transform: rotate(-8.0deg) }
+	 30% { transform: rotate(14.0deg) }
+	 40% { transform: rotate(-4.0deg) }
+	 50% { transform: rotate(10.0deg) }
+	 60% { transform: rotate( 0.0deg) } 
+	100% { transform: rotate( 0.0deg) }
+  }
